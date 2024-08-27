@@ -1013,7 +1013,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 .single-profile {
-    background-color: #f8f9fa; /* Light background color */
+    background-color: black; /* Light background color */
     border: 1px solid #dee2e6; /* Border color */
     border-radius: 8px; /* Rounded corners */
     padding: 20px;
