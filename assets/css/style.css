@@ -962,3 +962,41 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     text-align: center;
 }
 
+/* Base styles for the chatbot container */
+.chatbot-container {
+    position: fixed; /* Fixes the position relative to the viewport */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    z-index: 9999; /* Ensure it appears above other content */
+    max-width: 100%; /* Prevent it from exceeding viewport width */
+    width: 320px; /* Default width */
+}
+
+/* Styles for the iframe */
+.chatbot-container iframe {
+    width: 100%; /* Make the iframe width responsive */
+    height: 400px; /* Default height */
+    border: none; /* Remove iframe border */
+}
+
+/* Responsive adjustments for tablets and mobile devices */
+@media only screen and (max-width: 768px) {
+    .chatbot-container {
+        width: 270px; /* Adjust width for tablets */
+    }
+
+    .chatbot-container iframe {
+        height: 350px; /* Adjust height for tablets */
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .chatbot-container {
+        width: 220px; /* Adjust width for mobile devices */
+    }
+
+    .chatbot-container iframe {
+        height: 300px; /* Adjust height for mobile devices */
+    }
+}
+
