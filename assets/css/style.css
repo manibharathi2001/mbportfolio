@@ -1055,3 +1055,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         font-size: 1rem;
     }
 }
+
+#chatbot-iframe {
+    display: none;
+}
+
