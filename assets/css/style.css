@@ -1184,54 +1184,79 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     background-position: center;
 }
 
-.profile {
+.profiles {
+    padding: 50px 0 100px;
+    border: 1px solid #e5ebf2;
+}
+
+.profiles-content {
+    padding-top: 100px;
+}
+
+.profile-txt {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.single-profile {
+    position: relative;
+    height: auto; /* Set height to auto for responsiveness */
+    width: 100%; /* Ensure the width adapts to the screen size */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    border-right: 1px solid #b2c1ce;
+    overflow: hidden;
+    transition: background 0.5s linear;
 }
 
-.profile img {
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
+.profile-icon-name {
+    text-transform: capitalize;
+    color: #636a82;
+    font-size: 16px;
 }
 
-/* Media queries for smaller screens (tablets and below) */
 @media (max-width: 768px) {
-    .banner {
-        height: 50vh;
-        background-position: top;
-        padding: 20px;
+    .single-profile {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        padding: 20px 0;
+        border-right: none; /* Remove the border for a cleaner look */
     }
 
-    .profile {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .profile img {
-        width: 150px;
-        margin-bottom: 20px;
+    .profile-icon-name {
+        font-size: 14px;
     }
 }
 
-/* Media queries for extra small screens (mobile devices) */
-@media (max-width: 480px) {
-    .banner {
-        height: 40vh;
-        background-position: top;
-        padding: 10px;
-    }
+.portfolio {
+    padding: 50px 0 100px;
+    border: 1px solid #e5ebf2;
+}
 
-    .profile {
-        flex-direction: column;
-        padding: 10px;
-    }
+.portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
-    .profile img {
-        width: 120px;
-        margin-bottom: 15px;
+.single-portfolio-item {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust for a three-column layout */
+    margin: 10px;
+    border: 1px solid #e5ebf2;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 1024px) {
+    .single-portfolio-item {
+        flex: 1 1 calc(50% - 20px); /* Adjust to a two-column layout */
+    }
+}
+
+@media (max-width: 768px) {
+    .single-portfolio-item {
+        flex: 1 1 100%; /* Full-width layout on mobile screens */
     }
 }
 
