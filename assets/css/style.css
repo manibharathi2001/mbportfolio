@@ -1185,9 +1185,47 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         font-size: 13px;
     }
 }
-@media (max-width: 480px) {
-    .banner {
-        height: 40vh;
-        background-position: top;
+@media (max-width: 992px) {
+    .portfolio-banner {
+        height: 350px;
+        padding: 15px;
+    }
+
+    .portfolio-banner h1 {
+        font-size: 36px;
+    }
+
+    .portfolio-banner p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-banner {
+        height: 300px;
         padding: 10px;
     }
+
+    .portfolio-banner h1 {
+        font-size: 28px;
+    }
+
+    .portfolio-banner p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .portfolio-banner {
+        height: 250px;
+        padding: 10px;
+    }
+
+    .portfolio-banner h1 {
+        font-size: 22px;
+    }
+
+    .portfolio-banner p {
+        font-size: 14px;
+    }
+}
