@@ -1185,3 +1185,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         font-size: 13px;
     }
 }
+@media (max-width: 480px) {
+    .banner {
+        height: 40vh;
+        background-position: top;
+        padding: 10px;
+    }
