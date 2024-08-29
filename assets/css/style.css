@@ -1156,7 +1156,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (max-width: 1200px) {
+@media (min-width: 578px) {
     /* Portfolio Section */
     .portfolio .portfolio-item {
         width: 30%; /* Three items per row for large screens */
@@ -1172,3 +1172,66 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         font-size: 20px;
     }
 }
+
+/* General styles for large screens */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('your-banner-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.profile img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Media queries for smaller screens (tablets and below) */
+@media (max-width: 768px) {
+    .banner {
+        height: 50vh;
+        background-position: top;
+        padding: 20px;
+    }
+
+    .profile {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .profile img {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Media queries for extra small screens (mobile devices) */
+@media (max-width: 480px) {
+    .banner {
+        height: 40vh;
+        background-position: top;
+        padding: 10px;
+    }
+
+    .profile {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .profile img {
+        width: 120px;
+        margin-bottom: 15px;
+    }
+}
+
