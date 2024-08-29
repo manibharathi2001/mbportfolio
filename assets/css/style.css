@@ -1042,234 +1042,212 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 /* Responsive Styles */
-@media (max-width: 767px) {
-    .profiles .section-heading h2 {
-        font-size: 2rem;
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    /* Welcome Hero Section */
+    .welcome-hero {
+        height: auto;
+        padding: 20px;
+        background-size: cover;
     }
 
-    .profile-icon-link i {
-        font-size: 1.5rem;
-    }
-
-    .profile-icon-name {
-        font-size: 1rem;
-    }
-}
-
-#chatbot-iframe {
-    display: none;
-}
-
-/* Mobile Devices (up to 480px) */
-@media (max-width: 480px) {
-    body {
-        font-size: 14px;
-        padding: 0 15px;
-    }
+    /* Header Text */
     .header-text h2 {
-        font-size: 32px;
+        font-size: 28px;
     }
+
+    .header-text p {
+        font-size: 14px;
+        margin: 20px 0;
+    }
+
+    .header-text a {
+        width: 150px;
+        height: 45px;
+        line-height: 45px;
+    }
+
+    /* About Section */
+    .single-about-img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio .portfolio-item {
+        width: 100%; /* Full width for small devices */
+        margin-bottom: 20px;
+    }
+
+    /* Profile Section */
+    .profile-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .profile-section img {
+        width: 100%;
+        max-width: 300px; /* Restrict the maximum size */
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+
+    .profile-section p {
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    /* Welcome Hero Section */
+    .welcome-hero {
+        height: auto;
+        padding: 30px;
+    }
+
+    /* Header Text */
+    .header-text h2 {
+        font-size: 36px;
+    }
+
     .header-text p {
         font-size: 16px;
     }
+
     .header-text a {
         width: 160px;
         height: 50px;
         line-height: 50px;
-        font-size: 14px;
     }
-    .about, .education, .skills, .experience, .profiles {
-        padding: 20px 0;
-    }
-    .single-about-img img {
-        width: 100%;
-        height: auto;
-    }
-    .main-timeline:before {
-        left: 50%;
-    }
-    .timeline-content {
-        width: 90%;
+
+    /* About Section */
+    .single-about-img {
+        width: 80%;
         margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .portfolio .portfolio-item {
+        width: 48%; /* Two items per row on medium screens */
+        margin-bottom: 20px;
+    }
+
+    /* Profile Section */
+    .profile-section {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 30px;
+    }
+
+    .profile-section img {
+        width: 40%;
+        max-width: 400px;
+    }
+
+    .profile-section p {
+        text-align: left;
+        font-size: 16px;
+        width: 50%;
     }
 }
 
-/* Tablets (481px to 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-    .header-text h2 {
-        font-size: 40px;
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    /* Welcome Hero Section */
+    .welcome-hero {
+        height: auto;
+        padding: 40px;
     }
+
+    /* Header Text */
+    .header-text h2 {
+        font-size: 42px;
+    }
+
     .header-text p {
         font-size: 18px;
     }
+
     .header-text a {
         width: 180px;
         height: 55px;
         line-height: 55px;
-        font-size: 16px;
-    }
-    .about, .education, .skills, .experience, .profiles {
-        padding: 40px 0;
-    }
-    .single-about-img img {
-        width: 80%;
-        height: auto;
-    }
-    .timeline-content {
-        width: 80%;
-        margin: 0 auto;
-    }
-}
-
-/* Small Laptops (769px to 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .header-text h2 {
-        font-size: 48px;
-    }
-    .header-text p {
-        font-size: 20px;
-    }
-    .header-text a {
-        width: 190px;
-        height: 58px;
-        line-height: 58px;
-        font-size: 18px;
-    }
-    .about, .education, .skills, .experience, .profiles {
-        padding: 50px 0;
-    }
-    .single-about-img img {
-        width: 90%;
-        height: auto;
-    }
-    .timeline-content {
-        width: 90%;
-        margin: 0 auto;
-    }
-}
-
-/* Navigation Menu */
-nav.navbar.bootsnav {
-    padding: 15px 0;
-}
-/* Responsive Styles */
-
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
-    .welcome-hero {
-        height: auto;
-        padding: 20px;
-        background-size: cover; /* Adjust for smaller screens */
     }
 
-    .header-text h2 {
-        font-size: 32px;
-    }
-
-    .header-text p {
-        font-size: 16px;
-        margin: 20px 0 40px;
-    }
-
-    .header-text a {
-        width: 160px;
-        height: 50px;
-        line-height: 50px;
-    }
-
+    /* About Section */
     .single-about-img {
-        margin-bottom: 20px;
+        width: 60%;
+        margin-bottom: 30px;
     }
 
     .about-content {
         padding-top: 50px;
     }
 
+    /* Portfolio Section */
     .portfolio .portfolio-item {
-        width: 100%; /* Full-width for smaller screens */
-        margin-bottom: 20px;
-    }
-
-    .education .timeline-item {
-        margin-left: 20px;
-    }
-
-    .education .timeline-item::before {
-        left: 10px;
-    }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 768px) {
-    .welcome-hero {
-        height: auto;
-        padding: 30px;
-    }
-
-    .header-text h2 {
-        font-size: 40px;
-    }
-
-    .header-text p {
-        font-size: 18px;
-    }
-
-    .header-text a {
-        width: 180px;
-        height: 55px;
-        line-height: 55px;
-    }
-
-    .portfolio .portfolio-item {
-        width: 48%; /* Two columns on medium screens */
-        margin-bottom: 20px;
-    }
-
-    .about-content {
-        padding-top: 70px;
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (max-width: 992px) {
-    .welcome-hero {
-        height: auto;
-        padding: 40px;
-    }
-
-    .header-text h2 {
-        font-size: 48px;
-    }
-
-    .header-text p {
-        font-size: 20px;
-    }
-
-    .header-text a {
-        width: 190px;
-        height: 60px;
-        line-height: 60px;
-    }
-
-    .portfolio .portfolio-item {
-        width: 48%; /* Two columns for large screens */
+        width: 48%;
         margin-bottom: 30px;
     }
 
-    .about-content {
-        padding-top: 80px;
+    /* Profile Section */
+    .profile-section {
+        padding: 50px;
+    }
+
+    .profile-section img {
+        width: 50%;
+    }
+
+    .profile-section p {
+        font-size: 18px;
+        width: 40%;
     }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (max-width: 1200px) {
-    .welcome-hero {
-        height: auto;
-        padding: 50px;
+    /* Portfolio Section */
+    .portfolio .portfolio-item {
+        width: 30%; /* Three items per row for large screens */
+        margin-bottom: 40px;
     }
 
-    .portfolio .portfolio-item {
-        width: 30%; /* Three columns for extra-large screens */
-        margin-bottom: 40px;
+    /* Profile Section */
+    .profile-section img {
+        width: 60%;
+    }
+
+    .profile-section p {
+        font-size: 20px;
     }
 }
