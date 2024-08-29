@@ -625,6 +625,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
 }
 
 .portfolio-item img {
@@ -674,6 +675,38 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 
 .btn-primary:hover {
     background-color: #0056b3;
+}
+
+/* Responsive Grid */
+@media (min-width: 576px) {
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 575.98px) {
+    .portfolio {
+        padding: 30px 0 60px;
+    }
+
+    .portfolio-item img {
+        height: 200px;
+    }
 }
 
 /*-------------------------------------
@@ -1083,180 +1116,72 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     }
 
     /* Profile Section */
-    .profile-section {
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 30px;
-    }
-
-    .profile-section img {
-        width: 40%;
-        max-width: 400px;
-    }
-
-    .profile-section p {
-        text-align: left;
-        font-size: 16px;
-        width: 50%;
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (max-width: 992px) {
-    /* Welcome Hero Section */
-    .welcome-hero {
-        height: auto;
-        padding: 40px;
-    }
-
-    /* Header Text */
-    .header-text h2 {
-        font-size: 42px;
-    }
-
-    .header-text p {
-        font-size: 18px;
-    }
-
-    .header-text a {
-        width: 180px;
-        height: 55px;
-        line-height: 55px;
-    }
-
-    /* About Section */
-    .single-about-img {
-        width: 60%;
-        margin-bottom: 30px;
-    }
-
-    .about-content {
-        padding-top: 50px;
-    }
-
-    /* Portfolio Section */
-    .portfolio .portfolio-item {
-        width: 48%;
-        margin-bottom: 30px;
-    }
-
-    /* Profile Section */
-    .profile-section {
-        padding: 50px;
-    }
-
-    .profile-section img {
-        width: 50%;
-    }
-
-    .profile-section p {
-        font-size: 18px;
-        width: 40%;
-    }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 578px) {
-    /* Portfolio Section */
-    .portfolio .portfolio-item {
-        width: 30%; /* Three items per row for large screens */
-        margin-bottom: 40px;
-    }
-
-    /* Profile Section */
-    .profile-section img {
-        width: 60%;
-    }
-
-    .profile-section p {
-        font-size: 20px;
-    }
-}
-
-/* General styles for large screens */
-.banner {
+   /* Profile Section */
+.profile-section {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    height: 100vh;
-    background-image: url('your-banner-image.jpg');
-    background-size: cover;
-    background-position: center;
+    padding: 30px;
 }
 
-.profiles {
-    padding: 50px 0 100px;
-    border: 1px solid #e5ebf2;
+.profile-section img {
+    width: 40%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
 }
 
-.profiles-content {
-    padding-top: 100px;
-}
-
-.profile-txt {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.single-profile {
-    position: relative;
-    height: auto; /* Set height to auto for responsiveness */
-    width: 100%; /* Ensure the width adapts to the screen size */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-right: 1px solid #b2c1ce;
-    overflow: hidden;
-    transition: background 0.5s linear;
-}
-
-.profile-icon-name {
-    text-transform: capitalize;
-    color: #636a82;
+.profile-section p {
+    text-align: left;
     font-size: 16px;
+    width: 50%;
+    margin-left: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .profile-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .profile-section img {
+        width: 60%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .profile-section p {
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 768px) {
-    .single-profile {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
-        padding: 20px 0;
-        border-right: none; /* Remove the border for a cleaner look */
+    .profile-section img {
+        width: 80%;
+        max-width: 250px;
     }
 
-    .profile-icon-name {
+    .profile-section p {
         font-size: 14px;
     }
 }
 
-.portfolio {
-    padding: 50px 0 100px;
-    border: 1px solid #e5ebf2;
-}
+@media (max-width: 576px) {
+    .profile-section {
+        padding: 15px;
+    }
 
-.portfolio-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+    .profile-section img {
+        width: 100%;
+        max-width: 200px;
+    }
 
-.single-portfolio-item {
-    flex: 1 1 calc(33.333% - 20px); /* Adjust for a three-column layout */
-    margin: 10px;
-    border: 1px solid #e5ebf2;
-    padding: 15px;
-    transition: transform 0.3s ease-in-out;
-}
-
-@media (max-width: 1024px) {
-    .single-portfolio-item {
-        flex: 1 1 calc(50% - 20px); /* Adjust to a two-column layout */
+    .profile-section p {
+        font-size: 13px;
     }
 }
-
-@media (max-width: 768px) {
-    .single-portfolio-item {
-        flex: 1 1 100%; /* Full-width layout on mobile screens */
-    }
-}
-
