@@ -1185,47 +1185,64 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         font-size: 13px;
     }
 }
-@media (max-width: 992px) {
-    .portfolio-banner {
-        height: 350px;
-        padding: 15px;
-    }
-
-    .portfolio-banner h1 {
-        font-size: 36px;
-    }
-
-    .portfolio-banner p {
-        font-size: 18px;
-    }
+/* General styles for large screens */
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('your-banner-image.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.profile img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Media queries for smaller screens (tablets and below) */
 @media (max-width: 768px) {
-    .portfolio-banner {
-        height: 300px;
-        padding: 10px;
+    .banner {
+        height: 50vh;
+        background-position: top;
+        padding: 20px;
     }
 
-    .portfolio-banner h1 {
-        font-size: 28px;
+    .profile {
+        flex-direction: column;
+        padding: 20px;
     }
 
-    .portfolio-banner p {
-        font-size: 16px;
+    .profile img {
+        width: 150px;
+        margin-bottom: 20px;
     }
 }
 
-@media (max-width: 576px) {
-    .portfolio-banner {
-        height: 250px;
+/* Media queries for extra small screens (mobile devices) */
+@media (max-width: 480px) {
+    .banner {
+        height: 40vh;
+        background-position: top;
         padding: 10px;
     }
 
-    .portfolio-banner h1 {
-        font-size: 22px;
+    .profile {
+        flex-direction: column;
+        padding: 10px;
     }
 
-    .portfolio-banner p {
-        font-size: 14px;
+    .profile img {
+        width: 120px;
+        margin-bottom: 15px;
     }
 }
