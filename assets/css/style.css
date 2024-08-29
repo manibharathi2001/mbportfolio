@@ -1246,3 +1246,17 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         margin-bottom: 15px;
     }
 }
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 50vh; /* Adjust height further for very small screens */
+    }
+
+    .hero-section .hero-content h1 {
+        font-size: 1.5rem; /* Further adjust font size */
+    }
+
+    .hero-section .hero-content p {
+        font-size: 0.875rem; /* Further adjust font size */
+    }
+}
