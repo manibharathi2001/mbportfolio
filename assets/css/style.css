@@ -193,9 +193,9 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     background: url('browny-v1.0/assets/images/about/hero.png'); /* Added semicolon and url() */
     background-repeat: no-repeat;
     background-size:contain;
-   
     background-position: center;
     height: 890px;
+    margin-block-start: auto;
 }
 
 .welcome-hero:before{
@@ -533,79 +533,132 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         files
 --------------------------------------*/
 .profiles {
-    padding:  50px 0 100px;
-    border:  1px solid #e5ebf2;
+    padding: 50px 20px 100px;
+    border: 1px solid #e5ebf2;
+    background-color: #f8f9fa; /* Optional: Add a background color for better contrast */
 }
 
-.profiles-content {padding-top: 100px;}
-.profiles-content .col-sm-3{padding:0;}
-.profile-txt {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.profiles-details {
+    padding-top: 50px; /* Adjusted padding for consistency */
 }
+
+.section-heading h2 {
+    margin-bottom: 30px;
+    font-size: 2rem; /* Ensure heading is appropriately sized */
+}
+
 .single-profile {
     position: relative;
-    height: 150px; /* Set the height of the box */
-    width: 100%; /* Set the width to fill the container */
+    height: 150px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-right: 1px solid #b2c1ce;
     overflow: hidden;
-    -webkit-transition: background 0.5s linear; 
-    -moz-transition: background 0.5s linear; 
-    -ms-transition: background 0.5s linear; 
-    -o-transition: background 0.5s linear; 
     transition: background 0.5s linear;
+    background-color: #000000; /* Ensure background color for contrast */
+    margin-bottom: 1px;
+    text-align: center;
+}
+
+.profile-icon-link {
+    font-size: 2rem; /* Increase icon size */
+    color: #636a82; /* Icon color */
+    transition: color 0.3s ease;
+}
+
+.profile-icon-link:hover {
+    color: #d92cf9; /* Change icon color on hover */
 }
 
 .profile-icon-name {
     text-transform: capitalize;
     color: #636a82;
     font-size: 16px;
+    margin-top: 10px; /* Add some space above the name */
 }
-.single-profile.profile-no-border{border-right:transparent;}
+
+.single-profile.profile-no-border {
+    border-right: transparent;
+}
+
 .profile-border {
     border-bottom: 1px solid #b2c1ce;
 }
-.single-profile-overlay{
-    display:flex;
-    align-items:center;
+
+.single-profile-overlay {
+    display: flex;
+    align-items: center;
     text-transform: capitalize;
-    justify-content:center;
+    justify-content: center;
     position: absolute;
     top: 0;
     left: 0;
-    content: " ";
-    width:100%;
+    width: 100%;
     height: 100%;
-    background: #d92cf9;
-    background: -moz-linear-gradient(left, #d92cf9 0%, #b636ff 100%);
-    background: -webkit-linear-gradient(left, #d92cf9 0%,#b636ff 100%);
-    background: linear-gradient(to right, #d92cf9 0%,#b636ff 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d92cf9', endColorstr='#b636ff',GradientType=1 );
-    -webkit-transform:scale(0);
-    -moz-transform:scale(0);
-    -ms-transform:scale(0);
-    -o-transform:scale(0);
-    transform:scale(0);
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -ms-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
+    background: linear-gradient(to right, #d92cf9 0%, #b636ff 100%);
+    transform: scale(0);
+    transition: transform 0.5s ease, background-color 0.5s ease;
 }
-.single-profile:hover .single-profile-overlay{
-    -webkit-transform:scale(1);
-    -moz-transform:scale(1);
-    -ms-transform:scale(1);
-    -o-transform:scale(1);
-    transform:scale(1);
-    top:0;
+
+.single-profile:hover .single-profile-overlay {
+    transform: scale(1);
 }
-.single-profile:hover .profile-icon-name,.single-profile:hover .profile-txt a>i{color: #fff;}
-.single-profile:hover .profile-border {border:transparent;}
+
+.single-profile:hover .profile-icon-name,
+.single-profile:hover .profile-icon-link {
+    color: #fff;
+}
+
+.single-profile:hover .profile-border {
+    border: transparent;
+}
+
+/* Responsive adjustments */
+@media (min-width: 576px) {
+    .profiles {
+        padding: 50px 30px 100px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (min-width: 768px) {
+    .profiles {
+        padding: 50px 40px 100px; /* Increased padding for medium screens */
+    }
+    
+    .single-profile {
+        height: 180px; /* Increase height for better display on larger screens */
+        border-right: 1px solid #b2c1ce; /* Ensure border is consistent */
+    }
+
+    .profile-icon-name {
+        font-size: 18px; /* Slightly larger font size */
+    }
+
+    .profile-icon-link {
+        font-size: 2.5rem; /* Larger icon size for better display */
+    }
+}
+
+@media (min-width: 992px) {
+    .profiles {
+        padding: 60px 80px 120px; /* More padding for larger screens */
+    }
+
+    .single-profile {
+        height: 200px; /* Further increase height */
+    }
+
+    .profile-icon-name {
+        font-size: 20px; /* Larger font size for better readability */
+    }
+
+    .profile-icon-link {
+        font-size: 3rem; /* Larger icon size for larger screens */
+    }
+}
+
 /*-------------------------------------
         9. Portfolio
 --------------------------------------*/
@@ -664,18 +717,24 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background for a dynamic look */
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px; /* Slightly larger padding for better spacing */
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 8px; /* Increased border-radius for a smoother appearance */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for a subtle 3D effect */
+    transition: all 0.3s ease; /* Smooth transition for all changes */
+    font-weight: normal; /* Enhanced text styling */
+    font-size: 1rem; /* Slightly larger font size for better readability */
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background: linear-gradient(135deg, #0056b3, #003f7f); /* Darker gradient on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow for hover effect */
+    transform: translateY(-2px); /* Slight upward movement on hover */
 }
+
 
 /* Responsive Grid */
 @media (min-width: 576px) {
@@ -742,12 +801,12 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .contact-form .form-control {
     padding: 25px;
     font-size: 14px;
-    border: 1px solid #fff;
+    border: 1px solid #b3b3b3;
     border-radius: 0px;
     box-shadow: none;
     outline: 0!important;
-    background: #fff;
-    color: #636a82;
+    background:whitesmoke;
+    color: #2b2c2f;
     resize: none;
 }
 
@@ -914,7 +973,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 .certificate-image {
     width: 100%;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.3s ease;
 }
 
@@ -966,30 +1025,6 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     font-size:10px;
 }
 
-.single-profile {
-    margin-bottom: 20px;
-}
-
-.profile-txt {
-    text-align: center;
-}
-
-.profile-icon-link {
-    font-size: 24px;
-    color: #333;
-    text-decoration: none;
-}
-
-.profile-icon-name {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-@media (max-width: 576px) {
-    .single-profile {
-        margin-bottom: 15px;
-    }
-}
 
 .header-text {
     text-align: center;
@@ -1001,9 +1036,10 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 @media (max-width: 576px) {
     /* Welcome Hero Section */
     .welcome-hero {
-        height: auto;
+        height: 100vh;
         padding: 20px;
-        background-size: cover;
+        background-size: contain;
+        margin-top:auto;
     }
 
     /* Header Text */
@@ -1111,7 +1147,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     }
 
     .portfolio .portfolio-item {
-        width: 48%; /* Two items per row on medium screens */
+        width: auto; /* Two items per row on medium screens */
         margin-bottom: 20px;
     }
 
@@ -1191,7 +1227,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('your-banner-image.jpg');
+    background-image: url('');
     background-size: cover;
     background-position: center;
 }
@@ -1228,35 +1264,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     }
 }
 
-/* Media queries for extra small screens (mobile devices) */
-@media (max-width: 480px) {
-    .banner {
-        height: 40vh;
-        background-position: top;
-        padding: 10px;
-    }
-
-    .profile {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .profile img {
-        width: 120px;
-        margin-bottom: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-section {
-        height: 50vh; /* Adjust height further for very small screens */
-    }
-
-    .hero-section .hero-content h1 {
-        font-size: 1.5rem; /* Further adjust font size */
-    }
-
-    .hero-section .hero-content p {
-        font-size: 0.875rem; /* Further adjust font size */
-    }
+.p{
+    color: white;
+    text-decoration: underline;
+    font-family: roboto;
+    font-weight: bold;
 }
