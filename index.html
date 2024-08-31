@@ -239,8 +239,7 @@
 								</div><!--/.experience-time-->
 								<div class="timeline-horizontal-border">
 									<i class="fa fa-circle" aria-hidden="true"></i>
-									<span class="single-timeline-horizontal spacial-horizontal-line
-									"></span>
+									<span class="single-timeline-horizontal"></span>
 								</div>
 								<div class="timeline">
 									<div class="timeline-content">
@@ -415,37 +414,6 @@
 				
 		</section>
 		
-		<style>
-		/* Flexbox for centering content */
-		.single-profile {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			height: 200px; /* Adjust as needed */
-			text-align: center;
-			padding: 20px;
-			transition: background-color 0.3s ease;
-			margin-left: 165%;
-			
-		}
-		
-		/* Icon styling */
-		.profile-txt a i {
-			font-size: 40px;
-			color: #333; /* Default icon color */
-			transition: color 0.3s ease;
-		}
-		
-		/* Hover effects */
-		.single-profile:hover {
-			background-color: #000000;
-		}
-		
-		.profile-txt a:hover i {
-			color: #ff5722;
-		}
-		</style>
 		
 		<!--/.profiles-->
 		<!--profiles end -->
@@ -457,7 +425,7 @@
 				<div class="section-heading text-center">
 					<h2>Portfolio</h2>
 				</div>
-				<div class="container">
+				<div class="container d-flex flex-column justify-content-center">
 					<div class="portfolio-content">
 						<div class="row">
 							<div class="col-md-4 col-sm-6">
@@ -465,18 +433,22 @@
 									<img src="assets/images/portfolio/work samples/Screenshot 2024-04-19 185857.png" alt="Web Site(Techsoft Solutions)"/>
 									<div class="portfolio-overlay">
 										<h3 class="h3">Web Site(Techsoft Solutions)</h3>
-										<a href="" class="btn btn-primary">Developing Stage</a>
+										<p class="p">Developing Stage</p>
 									</div>
 								</div>
 							</div>
+
+							<div class="col-md-4 col-sm-6">
 								<div class="portfolio-item">
 									<img src="assets/images/portfolio/work samples/img.png" alt="Web Site(Techsoft Solutions)"/>
 									<div class="portfolio-overlay">
 										<h3 class="h3">Museum Ticket Booking Chatbot</h3>
-										<a href="" class="btn btn-primary">Developing Stage</a>
+										<p class="p">Developing Stage</p>
 									</div>
+							
 								</div>
 							</div>
+
 							<div class="col-md-4 col-sm-6">
 								<div class="portfolio-item">
 									<img src="assets/images/portfolio/work samples/Screenshot 2024-03-28 101746.png" alt="Prediction Project"/>
@@ -486,6 +458,7 @@
 									</div>
 								</div>
 							</div>
+
 							<div class="col-md-4 col-sm-6">
 								<div class="portfolio-item">
 									<img src="assets/images/portfolio/work samples/3.png" alt="Chatbot Project"/>
@@ -522,7 +495,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="certificate-item">
-                                <img src="assets/images/portfolio/work samples/Figma_certifate.jpg" alt="AWS Certified Cloud Practitioner" class="certificate-image">
+                                <img src="assets/images/portfolio/work samples/Figma_certifate.jpg" alt="" class="certificate-image">
                                 <div class="certificate-overlay">
                                     <h3>Certified In UI/UX</h3>
                                     <p>Mastering Figma: Beginner To Expert.</p>
@@ -535,7 +508,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="certificate-item">
-                                <img src="assets/images/portfolio/work samples/python certificate.jpg" alt="Google Data Analytics Professional Certificate" class="certificate-image">
+                                <img src="assets/images/portfolio/work samples/python certificate.jpg" alt="" class="certificate-image">
                                 <div class="certificate-overlay">
                                     <h3>Python Certificate</h3>
                                     <p>Proficiency in Python Lannguage.</p>
@@ -548,7 +521,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="certificate-item">
-                                <img src="assets/images/portfolio/work samples/Ml_GL.jpg" alt="Microsoft Certified: Azure Fundamentals" class="certificate-image">
+                                <img src="assets/images/portfolio/work samples/Ml_GL.jpg" alt="" class="certificate-image">
                                 <div class="certificate-overlay">
                                     <h3>Machine Learning(ML) Fundamentals</h3>
                                     <p>Foundational knowledge of ML</p>
@@ -570,7 +543,7 @@
 		<!--contact start -->
 		<section id="contact" class="contact">
 			<div class="section-heading text-center">
-				<h2>contact me</h2>
+				<h2>Contact Me</h2>
 			</div>
 			<div class="container">
 				<div class="contact-content">
@@ -578,16 +551,16 @@
 						<div class="col-md-offset-1 col-md-5 col-sm-6">
 							<div class="single-contact-box">
 								<div class="contact-form">
-									<form>
+									<form id="contact-form" action="send-email.php" method="post">
 										<div class="row">
 											<div class="col-sm-6 col-xs-12">
 												<div class="form-group">
-												  <input type="text" class="form-control" id="name" placeholder="Name*" name="name">
+													<input type="text" class="form-control" id="name" placeholder="Name*" name="name" required>
 												</div><!--/.form-group-->
 											</div><!--/.col-->
 											<div class="col-sm-6 col-xs-12">
 												<div class="form-group">
-													<input type="email" class="form-control" id="email" placeholder="Email*" name="email">
+													<input type="email" class="form-control" id="email" placeholder="Email*" name="email" required>
 												</div><!--/.form-group-->
 											</div><!--/.col-->
 										</div><!--/.row-->
@@ -601,28 +574,34 @@
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="form-group">
-													<textarea class="form-control" rows="8" id="comment" placeholder="Message" ></textarea>
+													<textarea class="form-control" rows="8" id="comment" placeholder="Message" name="message" required></textarea>
 												</div><!--/.form-group-->
 											</div><!--/.col-->
 										</div><!--/.row-->
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="single-contact-btn">
-													<a class="contact-btn" href="#" role="button">submit</a>
-												</div><!--/.single-single-contact-btn-->
-											</div><!--/.col-->
-										</div><br>
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="single-contact-btn">
-													<a class="contact-btn" href="assets/download/Mani bharathi_Resume.pdf" role="button">Download Resume</a>
+													<button type="submit" class="contact-btn" role="button">Submit</button>
 												</div><!--/.single-single-contact-btn-->
 											</div><!--/.col-->
 										</div><!--/.row-->
-									</form><!--/form-->
+									</form>
+									<br>
+									<div class="row">
+										<div class="col-sm-12">
+											<div class="single-contact-btn">
+												<a class="contact-btn" href="assets/download/Mani-bharathi_Resume.pdf" role="button">Download Resume</a>
+											</div><!--/.single-single-contact-btn-->
+										</div><!--/.col-->
+									</div><!--/.row-->
 								</div><!--/.contact-form-->
 							</div><!--/.single-contact-box-->
-						</div><!--/.col-->
+						</div><!--/.col-md-->
+					</div><!--/.row-->
+				</div><!--/.contact-content-->
+			</div><!--/.container-->
+		</section>
+		
 						<div class="col-md-offset-1 col-md-5 col-sm-6">
 							<div class="single-contact-box">
 								<div class="contact-adress">
