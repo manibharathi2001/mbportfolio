@@ -171,7 +171,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
 
 /*.navbar-toggle */
 nav.navbar.bootsnav .navbar-toggle {
-    position: relative;
+    position: static;
     background-color: transparent;
     border: 1px solid #d92cf9;
     padding: 10px;
@@ -189,7 +189,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;}
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    position: fixed;
     background: url('browny-v1.0/assets/images/about/hero.png'); /* Added semicolon and url() */
     background-repeat: no-repeat;
     background-size:contain;
@@ -381,69 +381,116 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
         6.  Skills
 --------------------------------------*/
 .skills {
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Adds spacing between skill blocks */
+    padding: 50px 20px; /* Adjusts padding for all devices */
 }
-.skill-content{padding: 50px 0 80px;}
-.single-skill-content{padding-top: 100px;}
+
+.skill-content {
+    padding: 50px 0 80px;
+}
+
+.single-skill-content {
+    padding-top: 100px;
+    flex: 1 1 calc(45% - 40px); /* Two columns on larger screens */
+    max-width: 400px; /* Optional for consistency */
+    margin: 0 auto; /* Centers content */
+}
+
 .section-heading h2 {
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase;
     padding-bottom: 50px;
     border-bottom: 1px solid #e5ebf2;
+    text-align: center; /* Centers the heading */
 }
+
 .single-progress-txt {
     display: flex;
+    justify-content: space-between; /* Ensures alignment of text and progress bar */
+    align-items: center;
+    margin-bottom: 15px;
 }
+
 .single-progress-txt h3 {
-    width: 10%;
+    flex: 0 0 10%; /* Fixed width for the percentage text */
     color: #a606c3;
+    font-size: 16px;
     position: relative;
     top: 6px;
-    left: 20px;
+    margin-left: 20px;
 }
+
 .barWrapper {
     font-weight: 400;
     font-size: 16px;
     text-transform: uppercase;
 }
+
 .progress {
-    border-radius:3px;
-    overflow: visible;
-    background: #e6ecf3;
-    height:8px;
-    margin-top: 15px;
-    width: 85%;
-    margin-bottom: 37px;
-}
-.progress-bar {
-   background: #b636ff;
     border-radius: 3px;
-   -webkit-transition: width 1.5s ease-in-out;
-   -ms-transition: width 1.5s ease-in-out;
-   -moz-transition: width 1.5s ease-in-out;
-   -o-transition: width 1.5s ease-in-out;
-   transition: width 1.5s ease-in-out;
+    background: #e6ecf3;
+    height: 8px;
+    margin: 15px 0 20px;
+    width: 100%;
+    position: relative; /* Allows tooltip to be positioned above it */
 }
-.tooltip{
-   position:relative;
-   float:right;
+
+.progress-bar {
+    background: #b636ff;
+    border-radius: 3px;
+    transition: width 1.5s ease-in-out;
+    width: 100%;
 }
-.tooltip > .tooltip-inner {
-   background-color: transparent;
-   padding: 1px 5px;
-   color: #b636ff;
-   font-weight: 500;
-   font-size: 12px;
-   border-radius: 0;
+
+.single-progress-txt {
+    width: 100%;
+    margin-bottom: 15px;
 }
-.popOver + .tooltip > .tooltip-arrow {
-   border-left: 6px solid transparent;
-   border-right: 6px solid transparent;
-   border-top: 6px solid #fff;
-   bottom: -1px;
-   transform: translateX(-50%);
-   margin-left: 0;
+
+.tooltip {
+    position: absolute;
+    top: -25px; /* Adjusts the position above the progress bar */
+    right: 0;
+    background: #fff;
+    border: 1px solid #b636ff;
+    border-radius: 5px;
+    padding: 2px 8px;
+    color: #b636ff;
+    font-weight: 500;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 10%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #b636ff transparent transparent transparent;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .single-skill-content {
+        flex: 1 1 100%; /* Single column on smaller screens */
+        max-width: 100%; /* Full width */
+        padding: 20px 0;
+    }
+
+    .progress {
+        width: 100%; /* Ensures full width on smaller screens */
+    }
+
+    .section-heading h2 {
+        font-size: 20px;
+        padding-bottom: 30px;
+    }
 }
 
 /*-------------------------------------
@@ -501,6 +548,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
+    overflow-wrap:break-word ;
+    text-align: left;
+    
 }
 .timeline-content h5 {
     color: #636a82;
@@ -1030,7 +1080,24 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     text-align: center;
 }
 
-/* Responsive Styles */
+/* Responsive Styles for Navbar */
+@media (max-width: 768px) {
+    nav.navbar.bootsnav ul.nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+    
+    nav.navbar.bootsnav ul.nav > li > a {
+        padding: 15px 10px; /* Adjust padding for smaller screens */
+        width: 100%; /* Full width for each item */
+        text-align: center; /* Center text */
+    }
+    
+    nav.navbar.bootsnav .navbar-toggle {
+        display: block; /* Ensure toggle button is visible */
+        margin: 10px auto; /* Center the toggle button */
+    }
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
