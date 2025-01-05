@@ -91,60 +91,100 @@
 	
 		<!--welcome-hero start -->
 		<div class="banner">
-			<div class="projects-container">
-				<!-- Web Developer Card -->
-				<div class="project-card" id="web-dev">
-					<div class="window-header">
-						<div class="window-buttons">
-							<div class="window-button close"></div>
-							<div class="window-button minimize"></div>
-							<div class="window-button maximize"></div>
-						</div>
+			<style>
+				.banner {
+					margin: 0;
+					font-family: Arial, sans-serif;
+					background-color: black;
+					color: white;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					min-height: 100vh;
+				}
+				.container {
+					text-align: center;
+					padding: 20px;
+				}
+				.row {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-wrap: wrap;
+					margin: 20px 0;
+				}
+				.card {
+					width: 250px;
+					margin: 10px;
+					text-align: center;
+				}
+				.card img {
+					width: 100px;
+					height: auto;
+					margin-bottom: 10px;
+				}
+				.card-title {
+					font-size: 18px;
+					font-weight: bold;
+					margin-bottom: 10px;
+				}
+				.title {
+					font-family: 'Times New Roman', serif;
+					font-size: 36px;
+					letter-spacing: 5px;
+					margin-top: 20px;
+				}
+				.email {
+					margin-top: 10px;
+					font-size: 16px;
+					color: #bbb;
+				}
+				@media (max-width: 768px) {
+					.card {
+						width: 200px;
+					}
+					.card-title {
+						font-size: 16px;
+					}
+					.title {
+						font-size: 28px;
+					}
+				}
+				@media (max-width: 480px) {
+					.card {
+						width: 150px;
+					}
+					.card img {
+						width: 80px;
+					}
+					.card-title {
+						font-size: 14px;
+					}
+					.title {
+						font-size: 24px;
+					}
+				}
+			</style>
+		</head>
+		<body>
+			<div class="container">
+				<div class="row">
+					<div class="card">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg" alt="HTML5 Logo">
+						<div class="card-title">Web Developer</div>
 					</div>
-					<div class="project-content">
-						<div class="project-label">Web Developer</div>
+					<div class="card">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma Logo">
+						<div class="card-title">UI/UX Designer</div>
+					</div>
+					<div class="card">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo">
+						<div class="card-title">Web App Developer</div>
 					</div>
 				</div>
-	
-				<!-- UI/UX Designer Card -->
-				<div class="project-card" id="uiux-design">
-					<div class="window-header">
-						<div class="window-buttons">
-							<div class="window-button close"></div>
-							<div class="window-button minimize"></div>
-							<div class="window-button maximize"></div>
-						</div>
-					</div>
-					<div class="project-content">
-						<div class="figma-logo">
-							<div class="figma-dot" style="background-color: #FF5733;"></div>
-							<div class="figma-dot" style="background-color: #FF7675;"></div>
-							<div class="figma-dot" style="background-color: #9B59B6;"></div>
-							<div class="figma-dot" style="background-color: #3498DB;"></div>
-							<div class="figma-dot" style="background-color: #2ECC71;"></div>
-						</div>
-						<div class="project-label">UI/UX Designer</div>
-					</div>
-				</div>
-	
-				<!-- Web App Developer Card -->
-				<div class="project-card" id="web-app">
-					<div class="window-header">
-						<div class="window-buttons">
-							<div class="window-button close"></div>
-							<div class="window-button minimize"></div>
-							<div class="window-button maximize"></div>
-						</div>
-					</div>
-					<div class="project-content">
-						<div class="project-label">Web App Developer</div>
-					</div>
-				</div>
-			</div>
-	
-			<div class="name-section">
-				<h1 class="name">Mani Bharathi V</h1>
-				<p class="email">manibharathi8005@gmail.com</p>
+				<div class="title">MANI BHARATHI V</div>
+				<div class="email">manibharathi8005@gmail.com</div>
 			</div>
 		</div>
 		
@@ -406,6 +446,17 @@
 											<h3>50%</h3>	
 										</div>
 									</div><!-- /.barWrapper -->
+									<div class="barWrapper">
+										<span class="progressText"> SQL</span>
+										<div class="single-progress-txt">
+											<div class="progress ">
+											   <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="10" aria-valuemax="100" style="">
+												    
+											   </div>
+											</div>
+											<h3>70%</h3>	
+										</div>
+									</div><!-- /.barWrapper -->
 								</div>
 							</div>
 						</div><!-- /.row -->
@@ -467,6 +518,7 @@
 			<div class="portfolio-details">
 				<div class="section-heading text-center">
 					<h2>Portfolio</h2>
+				</br>
 				</div>
 				<div class="container d-flex flex-column justify-content-center">
 					<div class="portfolio-content">
@@ -534,6 +586,7 @@
     <div class="container">
         <div class="section-heading text-center">
             <h2>Full Stack Learning Journey @ NxtWave Platform</h2>
+			</br>
         </div>
         <div class="timeline">
             <div class="timeline-item left">
